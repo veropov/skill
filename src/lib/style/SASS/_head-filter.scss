@@ -1,0 +1,19 @@
+.button_head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 12px 10px 16px;
+    gap: 6px;
+    background: #002CFB;
+    border-radius: 30px;
+    cursor: pointer;
+    .button_p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: white;
+        background: none;
+    }
+}

@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F1F4F9;
+}
+.container .main {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.container .main .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.container .main .head .head_search_filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+  padding: 10px 25px;
+  height: 68px;
+}
+.container .main .head .head_search_filter .head_search_filter_obj {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 25px;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .search_cont {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .search_cont .search {
+  width: 160px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .search_cont .search::-moz-placeholder {
+  font-size: 14px;
+  color: #71869D;
+  line-height: 140%;
+  font-weight: 400;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .search_cont .search::placeholder {
+  font-size: 14px;
+  color: #71869D;
+  line-height: 140%;
+  font-weight: 400;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .drop_filter {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #002CFB;
+  cursor: pointer;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .button_filter_act {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.container .main .head .head_search_filter .head_search_filter_obj .button_filter_act .button_filter_p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #8E9AA8;
+}
+.container .main .head .filter {
+  padding: 0px 25px;
+  width: 1440px;
+}
+.container .main .head .filter .filter_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container .main .head .filter .filter_item .filter_inf {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.container .main .head .filter .filter_item .filter_inf p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #71869D;
+}
+.container .main .filter_main {
+  display: flex;
+  flex-direction: column;
+}
+.container .main .filter_main .list_filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  cursor: pointer;
+}
+.container .main .filter_main .list_filter .trans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+}
+.container .main .filter_main .list_filter .trans .trans_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+}
+.container .main .filter_main .list_filter .trans .trans_cont .trans_date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container .main .filter_main .list_filter .trans .trans_cont .trans_date .trans_sub_title {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 140%;
+  color: #8E9AA8;
+}
+.container .main .filter_main .list_filter .transaction {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #121922;
+}
+.container .main .filter_main .list_filter .type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.filter_title {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #121922;
+}
+
+.filter_sub_title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #8E9AA8;
+}
+
+.comm_us_true {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #002CFB;
+}
+
+.comm_us_false {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #E52B2B;
+}
+
+.chekbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.chekbox input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8E9AA8;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+.chekbox_true {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.chekbox_true .icon {
+  position: absolute;
+  transform: translate(0px, -0.5px);
+}
+.chekbox_true input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  background: #002CFB;
+  border: none;
+}
+
+.Line {
+  border-bottom: 1px solid #EAF0FA;
+}
+
+.content_filter_true {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px;
+  width: 1440px;
+  background: #fff5d3;
+}
+
+.content_filter {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px;
+  width: 1440px;
+}
+.content_filter:hover {
+  background: rgba(212, 223, 243, 0.17);
+}
+
+.filter_anim {
+  position: absolute;
+  z-index: 10;
+  transform: translate(-25px, 0px);
+}
+
+.button_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 16px;
+  gap: 6px;
+  background: #002CFB;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.button_head .button_p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  background: none;
+}/*# sourceMappingURL=main.css.map */
