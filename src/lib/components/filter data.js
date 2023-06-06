@@ -225,15 +225,6 @@ class DataFilt {
         },
     ]
 
-    addData(filterData) {
-        this.filterData.push(filterData)
-    }
-
-    activeAll() {
-        this.filterData.map((obj) => {
-            return obj.check === true
-        })
-    }
     
 }
 
