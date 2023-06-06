@@ -9,6 +9,9 @@ import { Filters } from './Filters';
 import { useState } from 'react';
 import DataFilt from './components/filter data';
 import { Action } from './components/action';
+import Modal from './components/modal';
+import modalAn from './style/Lottie/skilla modal 2.json';
+import { Player} from '@lottiefiles/react-lottie-player';
 
 const HomePage = () => {
 
@@ -70,15 +73,70 @@ const HomePage = () => {
         />
     })
 
+    const [modal, setModal] = useState(false);
+    const [modalAnim, setmodalAnim] = useState(false);
+    const [back, setBack] = useState(false);
+
+    const argModal = (modal) => {
+        return setTimeout(() => {
+            setModal(!modal)
+        }, 300)
+    }
+
+    const argModalAnim = (modalAnim) => {
+        return setTimeout(() => {
+            setmodalAnim(modalAnim === false)
+            setTimeout(() => {
+                setmodalAnim(modalAnim === true)
+            }, 500)
+        },0)
+    }
+
+    function LottieCheck() {
+        if (modalAnim === true) {
+            return (
+            <div className='modal_anim'>
+                <Player 
+                    className="filter_anim" 
+                    src={modalAn} 
+                    loop={false}
+                    autoplay={true}
+                    speed={1.2}
+                />
+            </div>
+            )
+        } else return null;
+    }
+
+    const argBack = (back) => {
+        setBack(!back)
+    }
+
     return (
         <div className="container">
             <div className="main">
+                {back ? <div className='back' onClick={() => {
+                    argBack(back)
+                    argModal(modal)
+                    argModalAnim(modalAnim)
+                }   
+                }></div> : <div className='back_active'/>}
                 <div className="head">
                     <div className="head_search_filter">
                         <div className="head_search_filter_obj">
+                            {LottieCheck()}
+                            {modal ? <Modal /> : null}
                             <Search />
                             <p className="drop_filter">Сбросить фильтры</p>
-                            <Action count={count} />
+                            <Action 
+                                count={count} 
+                                argModal={argModal} 
+                                argModalAnim={argModalAnim}
+                                modal={modal}
+                                modalAnim={modalAnim}
+                                argBack={argBack}
+                                back={back}
+                            />
                         </div>
                         {buttonWatch.Button()}
                     </div>

@@ -4,13 +4,34 @@
     align-items: center;
     background: #F1F4F9;
     .main {
-        margin-top: 300px;
+        margin-top: 200px;
+        margin-bottom: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 1440px;
         background: #FFFFFF;
         border-radius: 8px;
+        .back {
+            position: absolute;
+            z-index: 10;
+            background: #1219228a;
+            width: 1440px;
+            height: 763px;
+            border-radius: 8px;
+            clip-path: circle(120% at 30% 5%);
+            transition: clip-path .5s ease-in-out;
+        }
+        .back_active {
+            position: absolute;
+            z-index: 10;
+            background: #1219228a;
+            width: 1440px;
+            height: 763px;
+            border-radius: 8px;
+            clip-path: circle(0% at 30% 5%);
+            transition: clip-path .5s ease-in-out;
+        }
         .head {
             display: flex;
             flex-direction: column;
@@ -67,6 +88,21 @@
                             font-size: 14px;
                             line-height: 140%;
                             color: #8E9AA8;
+                        }
+                    }
+                    .button_filter_act_true {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 6px;
+                        cursor: pointer;
+                        .button_filter_p_true {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 140%;
+                            color: #002CFB;
                         }
                     }
                 }
@@ -148,7 +184,15 @@
                         align-items: flex-start;
                     }
                     .state {
-
+                        display: flex;
+                        justify-content: center;
+                        padding: 0 8px;
+                        background: #DBF8EF;
+                        border-radius: 4px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #1B8860;
                     }
                 }
             }
@@ -237,7 +281,7 @@
     flex-direction: column;
     padding: 0px 25px;
     width: 1440px;
-    background: #fff5d3;
+    background: #f1f1f1;
 
 }
 
@@ -253,7 +297,6 @@
 
 .filter_anim {
     position: absolute;
-    z-index: 10;
     transform: translate(-25px, 0px);
     cursor: pointer;
 }
