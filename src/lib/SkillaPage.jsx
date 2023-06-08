@@ -13,7 +13,7 @@ import Modal from './components/modal';
 import modalAn from './style/Lottie/skilla modal 2.json';
 import { Player} from '@lottiefiles/react-lottie-player';
 
-const HomePage = () => {
+const SkillaPage = () => {
 
     const buttonWatch = new Button(
         'Подключить платежную систему',
@@ -21,9 +21,7 @@ const HomePage = () => {
     );
 
     const [fill, setFill] = useState(DataFilt.filterData)
-
     const [arg, setArg] = useState(false);
-
     const argR = (arg) => {
         return setArg(!arg)
     }
@@ -53,7 +51,6 @@ const HomePage = () => {
     }
 
     const [count, setCount] = useState(0);
-
     const countR = (count, checkR) => {
         if (checkR === false) {
             return setCount(count+1)
@@ -161,4 +158,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default SkillaPage;
